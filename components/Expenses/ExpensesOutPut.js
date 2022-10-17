@@ -3,11 +3,15 @@ import { GlobalStyles } from "../../constants/styles";
 import ExpensesList from "./ExpensesList";
 import ExpensesSummary from "./ExpensesSummary";
 
-const ExpensesOutPut = ({ expenses, periodName }) => {
+const ExpensesOutPut = ({ expenses, periodName, fallbackText }) => {
+  let context = <Text style={styles.infotext}>{fallbackText}</Text>;
+  if (expenses.length > 0) {
+    context = <ExpensesList expenses={expenses} />;
+  }
   return (
     <View style={styles.container}>
       <ExpensesSummary expenses={expenses} periodName={periodName} />
-      <ExpensesList expenses={expenses} />
+      {context}
     </View>
   );
 };
@@ -21,5 +25,11 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
     backgroundColor: GlobalStyles.colors.primary700,
     flex: 1,
+  },
+  infotext: {
+    color: "white",
+    fontSize: 16,
+    textAlign: "center",
+    marginTop: 32,
   },
 });

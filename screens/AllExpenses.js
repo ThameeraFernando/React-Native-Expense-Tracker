@@ -5,7 +5,14 @@ import { ExpensesContext } from "../store/expenses-context";
 
 const AllExpenses = () => {
   const expenseCtx = useContext(ExpensesContext);
-  return <ExpensesOutPut periodName="Total" expenses={expenseCtx.expenses} />;
+
+  return (
+    <ExpensesOutPut
+      periodName="Total"
+      expenses={expenseCtx.expenses}
+      fallbackText="No expenses found"
+    />
+  );
 };
 
 export default AllExpenses;
