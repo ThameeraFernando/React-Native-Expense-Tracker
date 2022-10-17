@@ -2,38 +2,7 @@ import { View, FlatList, Text, StyleSheet } from "react-native";
 import { GlobalStyles } from "../../constants/styles";
 import ExpensesList from "./ExpensesList";
 import ExpensesSummary from "./ExpensesSummary";
-const DUMMY_EXPENSES = [
-  {
-    id: "e1",
-    description: "A pair of shoes",
-    amount: 59.99,
-    date: new Date("2021-12-19"),
-  },
-  {
-    id: "e2",
-    description: "Chair",
-    amount: 199.99,
-    date: new Date("2021-12-19"),
-  },
-  {
-    id: "e3",
-    description: "Bananas",
-    amount: 69.99,
-    date: new Date("2021-12-19"),
-  },
-  {
-    id: "e4",
-    description: "Book",
-    amount: 19.99,
-    date: new Date("2021-12-19"),
-  },
-  {
-    id: "e5",
-    description: "Laptop",
-    amount: 1999.99,
-    date: new Date("2021-12-19"),
-  },
-];
+
 const ExpensesOutPut = ({ expenses, periodName }) => {
   return (
     <View style={styles.container}>
