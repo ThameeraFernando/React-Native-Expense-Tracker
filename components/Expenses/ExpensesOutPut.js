@@ -6,8 +6,8 @@ import ExpensesSummary from "./ExpensesSummary";
 const ExpensesOutPut = ({ expenses, periodName }) => {
   return (
     <View style={styles.container}>
-      <ExpensesSummary expenses={DUMMY_EXPENSES} periodName={periodName} />
-      <ExpensesList expenses={DUMMY_EXPENSES} />
+      <ExpensesSummary expenses={expenses} periodName={periodName} />
+      <ExpensesList expenses={expenses} />
     </View>
   );
 };
