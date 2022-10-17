@@ -13,25 +13,25 @@ const DUMMY_EXPENSES = [
     id: "e2",
     description: "Chair",
     amount: 199.99,
-    date: new Date("2022-2-19"),
+    date: new Date("2021-12-19"),
   },
   {
     id: "e3",
     description: "Bananas",
     amount: 69.99,
-    date: new Date("2022-10-16"),
+    date: new Date("2021-12-19"),
   },
   {
     id: "e4",
     description: "Book",
     amount: 19.99,
-    date: new Date("2022-3-16"),
+    date: new Date("2021-12-19"),
   },
   {
     id: "e5",
     description: "Laptop",
     amount: 1999.99,
-    date: new Date("2021-6 -16"),
+    date: new Date("2021-12-19"),
   },
 ];
 const ExpensesOutPut = ({ expenses, periodName }) => {
