@@ -3,5 +3,5 @@ export const getFormattedDate = (date) => {
 };
 
 export const getDateMinusDate = (date, days) => {
-  return new Date(date.getFullYear(), date.getMonth, date.getDate - days);
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate() - days);
 };
